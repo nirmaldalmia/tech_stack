@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Text, View } from 'react-native';
+import { View } from 'react-native';
 import { Header } from './src/components/common';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
@@ -10,7 +10,7 @@ export default class App extends Component {
   render() {
     return (
       <Provider store={createStore(reducers)}>
-        <View>
+        <View style={{ flex: 1 }}>
           <Header headerText="Tech Stack" />
           <LibraryList />
         </View>
