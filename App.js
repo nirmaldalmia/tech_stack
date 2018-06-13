@@ -1,19 +1,20 @@
 import React, { Component } from 'react';
-import { View, Text, } from 'react-native';
+import { Text, View } from 'react-native';
+import { Header } from './src/components/common';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 import reducers from './src/reducers';
-import { Header } from './src/components';
+import LibraryList from './src/components/LibraryList'
 
 export default class App extends Component {
   render() {
     return (
-      <Provider store={createStore(reducers)} >
+      <Provider store={createStore(reducers)}>
         <View>
           <Header headerText="Tech Stack" />
-          <Text> Learning Redux </Text>
+          <LibraryList />
         </View>
       </Provider>
-    );
+    )
   }
 }
